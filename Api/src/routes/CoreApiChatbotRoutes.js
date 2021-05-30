@@ -8,6 +8,6 @@ const coreApiChatBotController = new CoreApiChatBotController()
 // :limit indica a quantidade de repositorios que deseja filtrar
 CoreApiChatBotRoutes.get('/repositories/:limit', (req,res) => { coreApiChatBotController.getTakenRepositories(req,res)});
 //Rota para obtenção da URL do avatar da take
-CoreApiChatBotRoutes.get('/avatar/', (req,res) => { coreApiChatBotController.getTakenAvatar(req,res)});
+CoreApiChatBotRoutes.get('/avatar/', (req,res) => {  res.send('Hello')});
 
 module.exports = CoreApiChatBotRoutes
