@@ -5,7 +5,8 @@ class CoreApiChatBotService {
   constructor() {
     this.githubApiConfig = config.githubApiConfig
   }
-  async getTakenRepositories(limit) {
+  async getTakenRepositories(index) {
+    const limit = 5;
     const pathGetRepos = this.githubApiConfig.baseUrl.concat('users/takenet/repos?sort=created&direction=asc')
     const response = await axios.get(pathGetRepos)
     // Filtro que consiste em pegar apenas os 5(cinco) repositórios mais antigos da Take
@@ -26,7 +27,7 @@ class CoreApiChatBotService {
         })
       }
     }
-    return reposCSharp.slice(0, limit);
+    return reposCSharp.slice(0, limit)[index];
 
   }
   async getTakenAvatar() {

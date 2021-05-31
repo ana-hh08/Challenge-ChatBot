@@ -6,8 +6,8 @@ class CoreApiChatBotController {
     //Tratamento das requisições
     async getTakenRepositories(req, res) {
         try {
-            const limit = req.params.limit;
-            const repositorios = await this.coreApiChatBotService.getTakenRepositories(limit)    
+            const index = req.params.index;
+            const repositorios = await this.coreApiChatBotService.getTakenRepositories(index)    
             res.send({
                 repositorios
             })
