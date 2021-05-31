@@ -1,5 +1,6 @@
-const config = require("../config.js")
-const axios = require("axios")
+import config from "../config.js"
+import axios from 'axios'
+
 class CoreApiChatBotService {
   constructor() {
     this.githubApiConfig = config.githubApiConfig
@@ -35,5 +36,4 @@ class CoreApiChatBotService {
     return avatar
   }
 }
-
-module.exports = CoreApiChatBotService
+export default CoreApiChatBotService;

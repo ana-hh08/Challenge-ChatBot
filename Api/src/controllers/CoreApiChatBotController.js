@@ -1,4 +1,4 @@
-const CoreApiChatBotService = require("../services/CoreApiChatbotService.js")
+import CoreApiChatBotService from "../services/CoreApiChatbotService.js"
 class CoreApiChatBotController {
     constructor() {
         this.coreApiChatBotService = new CoreApiChatBotService();
@@ -28,5 +28,4 @@ class CoreApiChatBotController {
         }
     }
 }
-
-module.exports = CoreApiChatBotController
+export default CoreApiChatBotController;

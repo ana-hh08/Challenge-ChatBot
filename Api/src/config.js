@@ -1,4 +1,4 @@
-module.exports = {
+export default {
     githubApiConfig: {
         baseUrl:'https://api.github.com/'
     }
